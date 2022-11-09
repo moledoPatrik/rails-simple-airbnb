@@ -1,0 +1,16 @@
+<h1>Flats</h1>
+<div class="d-flex flex-wrap ">
+<% @flats.each do |flat| %>
+  <div class="card" style="width: 18rem;">
+    <img src="http://source.unsplash.com/featured/?london&<%= rand(1000) %>)" class="card-img-top" alt="..." style="height: 20vh">
+    <div class="card-body">
+      <h5 class="card-title"><%= flat.name %></h5>
+      <p class="card-text"><%= link_to 'Details', flat_path(flat) %></p>
+      <p class="card-text"><%= flat.address %></p>
+      <p class="card-text">Price per night: <%= flat.price_per_night %></p>
+      <p class="card-text">Number of guests: <%= flat.number_of_guests %></p>
+      <%# <a href="#" class="btn btn-primary">Go somewhere</a> %>
+    </div>
+  </div>
+<% end %>
+</div>
